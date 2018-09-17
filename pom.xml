@@ -39,7 +39,7 @@
 		<hibernate.version>4.3.11.Final</hibernate.version>
 		<easymock.version>3.4</easymock.version>
 		<jackson.version>2.5.0</jackson.version>
-		<freemarker.version>2.3.23</freemarker.version>
+		<freemarker.version>2.3.28</freemarker.version>
 		<commons-io.version>2.4</commons-io.version>
 		<commons-email.version>1.4</commons-email.version>
 		<hsqldb.version>2.3.2</hsqldb.version>
@@ -160,11 +160,6 @@
 			<artifactId>httpclient</artifactId>
 			<version>4.5.1</version>
 		</dependency>
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>freemarker</artifactId>
-			<version>${freemarker.version}</version>
-		</dependency>
 
 
 		<dependency>
@@ -198,6 +193,10 @@
 					<artifactId>shiro-all</artifactId>
 					<groupId>org.apache.shiro</groupId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.freemarker</groupId>
+					<artifactId>freemarker</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -210,6 +209,12 @@
 					<artifactId>commons-logging</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>${freemarker.version}</version>
 		</dependency>
 
 		<!-- Spring Web -->
@@ -250,12 +255,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.microsoft.sqlserver</groupId>
-			<artifactId>sqljdbc4</artifactId>
-			<version>4.0</version>
-		</dependency>
-
-		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-ehcache</artifactId>
 			<version>${hibernate.version}</version>
@@ -282,6 +281,10 @@
 				<exclusion>
 					<artifactId>slf4j-api</artifactId>
 					<groupId>org.slf4j</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>freemarker</groupId>
+					<artifactId>freemarker</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
